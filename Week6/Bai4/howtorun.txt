@@ -1,0 +1,2 @@
+docker build -t nginx-static .
+docker run -p 80:80 nginx-static    

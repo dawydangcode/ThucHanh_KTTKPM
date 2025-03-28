@@ -1,0 +1,6 @@
+docker build -t custom-redis .
+docker run -p 6379:6379 custom-redis
+
+
+Kết nối bằng redis-cli
+redis-cli -h localhost -p 6379 -a mypassword

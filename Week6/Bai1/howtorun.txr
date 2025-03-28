@@ -1,0 +1,2 @@
+docker build -t Bai1 .
+docker run -p 3000:3000 Bai1
