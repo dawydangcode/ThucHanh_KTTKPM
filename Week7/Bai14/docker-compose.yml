@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  app1:
+    image: nginx:latest
+    networks:
+      - my-network
+  app2:
+    image: redis:latest
+    networks:
+      - my-network
+networks:
+  my-network:
+    driver: bridge

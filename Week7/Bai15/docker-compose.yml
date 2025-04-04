@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  redis:
+    image: redis:latest
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+    ports:
+      - "6379:6379"
