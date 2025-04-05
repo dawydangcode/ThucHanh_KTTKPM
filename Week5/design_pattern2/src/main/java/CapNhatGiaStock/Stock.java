@@ -18,14 +18,6 @@ public class Stock implements Subject {
         notifyObservers();
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public String getName() {
-        return name;
-    }
-
     @Override
     public void addObserver(Observer observer) {
         observers.add(observer);
