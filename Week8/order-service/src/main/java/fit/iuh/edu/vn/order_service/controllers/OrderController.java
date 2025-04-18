@@ -23,13 +23,13 @@ public class OrderController {
         return orderRepository.findById(id).orElseThrow();
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/update/{id}")
     public Order updateOrder(@PathVariable Long id, @RequestBody Order order) {
         order.setId(id);
         return orderRepository.save(order);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public void deleteOrder(@PathVariable Long id) {
         orderRepository.deleteById(id);
     }

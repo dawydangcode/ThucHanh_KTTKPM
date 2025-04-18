@@ -23,13 +23,13 @@ public class CustomerController {
         return customerRepository.findById(id).orElseThrow();
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/update/{id}")
     public Customer updateCustomer(@PathVariable Long id, @RequestBody Customer customer) {
         customer.setId(id);
         return customerRepository.save(customer);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public void deleteCustomer(@PathVariable Long id) {
         customerRepository.deleteById(id);
     }

@@ -29,13 +29,13 @@ public class ProductController {
         return productRepository.findById(id).orElseThrow();
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/update/{id}")
     public Product updateProduct(@PathVariable Long id, @RequestBody Product product) {
         product.setId(id);
         return productRepository.save(product);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public void deleteProduct(@PathVariable Long id) {
         productRepository.deleteById(id);
     }
